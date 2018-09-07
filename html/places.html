@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>景点</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 微软雅黑;
+		}
+		#head{
+			width: 1600px;
+			height: 200px;
+		}
+		#main{
+			width: 1600px;
+			height: auto;
+		}
+		#foot{
+			width: 1600px;
+			height: 200px;
+			border-top: 5px solid #32867c;
+			position:relative;
+		}
+		#head_div1{
+			width: 1600px;
+			height: 100px;
+			float: left;
+		}
+		#head_div2{
+			width: 1600px;
+			height: 100px;
+			background-color: #32867c;
+			float: left;
+		}
+		#ul1 li{
+			list-style: none;
+			float: left;
+		}
+		.li_div{
+			width: 100px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+		}
+		.li_div:hover{
+			height: 47px;
+			border-bottom: 3px solid #32867c;
+		}
+		.li_a{
+			text-decoration: none;
+			color: black;
+			outline: none;
+		}
+		#li_down_div:hover #guanyu_down{
+			visibility: visible;
+		}
+		#guanyu_down{
+			background-color: white; 
+			width: 200px; 
+			height: 100px; 
+			border-top: 3px solid #32867c; 
+			position: relative; 
+			top: -3px;
+			left: 0px;
+			visibility: hidden;
+		}
+		#guanyu_ul li{
+			width: 200px;
+			text-align: left;
+			font-size: 14px;
+		}	
+		#foot_logo_div{
+			width: 100%;
+			height: 180px;
+			background-color: #151515;
+		}
+		#copyright{
+			width: 100%;
+			height: 20px;
+			background-color: #111111;
+			text-align: center;
+		}
+		#main_bottom{
+			width: 100%;
+			height: 100px;
+			background-color: #f8f8f8;
+			border-top: 2px solid #dddddd;
+		}
+		#main_center{
+			width: 100%;
+			height: 1000px;;
+			perspective: 1000px;
+			transform-style: preserve-3d;
+			background-color: #ffffff;
+			background-image: url(../img/地图.jpg)
+		}
+		#main_ul1{
+			float: left;
+			clear: both;
+			position: absolute;
+			top: -60px;
+			left: 350px;
+		}
+		#main_ul1 li{
+			list-style: none;
+			float: left;
+		}
+		#main_ul1 li button{
+			width: 75px;
+			height: 25px;
+			margin-left: 10px;
+			outline: none;
+			border: 1px solid #a2a2a2;
+			border-radius: 5px;
+			color: black;
+			font-size: 12px;
+			text-align: center;
+			line-height: 25px;
+		}
+		#main_ul1 li button:hover{
+			color: #32867c;
+		}
+		#main_ul1 li button:focus{
+			background-color: #111111;
+			color: white;
+		}
+		.main_picture{
+			width: 1200px;
+			height: 900px;
+			border-radius: 10px;
+			position: absolute;
+			top: 100px;
+			left: -150px;
+			opacity: 0;
+			transform: translateZ(-500px) translateX(2000px);
+			transition: all 1s;
+			transition-delay: 0.5s;
+		}
+		#all:focus #picture1{
+			opacity: 1;
+			transform: translateZ(0) translateX(0);
+		}
+		#shouxihu:focus #picture2{
+			opacity: 1;
+			transform: translateZ(0) translateX(0);
+		}
+		#wenchangge:focus #picture3{
+			opacity: 1;
+			transform: translateZ(0) translateX(0);
+		}
+		#other:focus #picture4{
+			
+			opacity: 1;
+			transform: translateZ(0) translateX(0);
+		}
+		#picture1{
+			background-color: white;
+		}
+		#picture2{
+			background-color: white;
+		}
+		#picture3{
+			background-color: white;
+		}
+		#picture4{
+			background-color: white;
+		}
+		.main_in_picture{
+			width: 550px;
+			height: 400px;
+			float: left;
+			margin-left: 30px;
+			margin-top: 30px;
+			border: 2px solid #a2a2a2;
+			opacity: 0;
+			transition: all 1s;
+			transition-delay: 1s;
+		}
+		
+		#all:focus .main_in_picture{
+			opacity: 1;
+			
+		}
+		#shouxihu:focus .main_in_picture{
+			opacity: 1;
+			
+		}
+		#wenchangge:focus .main_in_picture{
+			opacity: 1;
+			
+		}
+		#other:focus .main_in_picture{
+			
+			opacity: 1;
+			
+		}
+		
+		.main_shadow{
+			float: left;
+			clear: both;
+			margin-left: 50px;
+			margin-top: 25px;
+			height: 225px;
+			position: relative;
+		}
+		.main_shadow_show{
+			width: 450px;
+			height: 225px;
+			background-color: #111111;
+			opacity: 0;
+			transition: all 0.5s;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.shadow_a{
+			width: 75px;
+			height: 25px;
+			background-color: #32867c;
+			outline: none;
+			color: white;
+			position: absolute;
+			opacity: 0;
+			text-align: center;
+			text-decoration: none;
+			line-height: 25px; 
+			top: 100px;
+			left: 185px;
+			transition: all 0.5s;
+			transition-delay: 0.5s;
+		}
+		.main_shadow:hover .main_shadow_show{
+			opacity: 0.5;
+		}
+		.main_shadow:hover .shadow_a{
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body style="width: 1600px; margin: auto;">
+	<header id="head">
+		<div id="head_div1">
+			<p style="width: 200px;height: 100px;text-align: center;line-height: 100px;font-size: 30px;font-weight: 900;margin-left: 200px;float: left;">
+				扬州旅行社
+			</p>
+			<ul id="ul1" style="width: 600px;height: 50px;float: left;margin-left: 400px;margin-top: 25px;">
+				<li>
+					<div class="li_div"><a class="li_a" href="index.html">主页</a></div>
+				</li>
+				<li>
+					<div class="li_div"><a class="li_a" href="places.html">景点介绍</a></div>
+				</li>
+				<li>
+					<div class="li_div"><a class="li_a" href="comments.html">热评</a></div>
+				</li>
+				<li>
+					<div class="li_div" id="li_down_div">
+					关于
+					<div id="guanyu_down">
+						<ul id="guanyu_ul">
+							<li>
+								&nbsp;&nbsp;&nbsp;<a href="about.html" style="outline: none;text-decoration: none;color: black;">关于我们</a>
+								<hr style="width: 85%;margin: auto;border: 1px solid #cccccc;">
+							</li>
+							<li>
+								&nbsp;&nbsp;&nbsp;<a href="services.html" style="outline: none;text-decoration: none;color: black;">服务</a>
+							</li>
+						</ul>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="li_div"><a class="li_a" href="feature.html">特色</a></div>
+				</li>
+				<li>
+					<div class="li_div"><a class="li_a" href="contact.html">联系我们</a></div>
+				</li>
+			</ul>
+			
+		</div>
+		<div id="head_div2">
+			<p style="width: 150px;height: 100px;text-align: center;line-height: 100px;font-size: 24px;color: white;margin-left: 200px;">景点简介</p>
+		</div>
+	</header>
+	<main id="main">
+		<div id="main_center">
+			<ul id="main_ul1">
+				<li>
+					<button id="all">全部
+					<div class="main_picture" id="picture1">
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;个园</h1>
+							<p style="width: 100%;text-align: left;color: black;">个园位于扬州古城东北隅，盐阜东路10号，曾荣获第三批“全国重点文物保护单位”和“首批国家重点公园”称号,在国内外享有盛誉,也是中国四大名园之一，这座清代扬州盐商宅邸私家园林，以遍植青竹而名，以春夏秋冬四季假山而胜。</p>
+							<div class="main_shadow">
+								<img src="../img/个园.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="portofoliodetail.html" target="_blank" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;东关街</h1>
+							<p style="width: 100%;text-align: left;color: black;">东关街是扬州城里最具有代表性的一条历史老街。它东至古运河边，西至国庆路，全长1122米，原街道路面为长条板石铺设，这条街以前不仅是扬州水陆交通要冲，而且是商业、手工业和宗教文化中心。街面上市井繁华、商家林立，行当俱全，生意兴隆。</p>
+							<div class="main_shadow">
+								<img src="../img/东关街.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;何园</h1>
+							<p style="width: 100%;text-align: left;color: black;">何园，坐落于江苏省扬州市的徐凝门街66号，又名”寄啸山庄“，是一处始建于清代中期的中国古典园林建筑，被誉为“晚清第一园“，面积1.4万余平方米，建筑面积7000余平方米。何园由清光绪年间何芷舠所造，片石山房系石涛大师叠山作品。</p>
+							<div class="main_shadow">
+								<img src="../img/何园.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;瘦西湖</h1>
+							<p style="width: 100%;text-align: left;color: black;">“瘦西湖”之名最早见于文献记载为清初吴绮《扬州鼓吹词序》：“城北一水通平山堂，名瘦西湖，本名保障湖。”乾隆元年（1736），钱塘（杭州）诗人汪沆慕名来到扬州，在饱览了这里的美景后，与家乡的西湖作比较，赋诗道：“垂杨不断接残芜，雁齿虹桥俨画图。也是销金一锅子，故应唤作瘦西湖。</p>
+							<div class="main_shadow">
+								<img src="../img/瘦西湖.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+					</div>
+					</button>
+				</li>
+				<li>
+					<button id="shouxihu">自然
+					<div class="main_picture" id="picture2">
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;瘦西湖</h1>
+							<p style="width: 100%;text-align: left;color: black;">“瘦西湖”之名最早见于文献记载为清初吴绮《扬州鼓吹词序》：“城北一水通平山堂，名瘦西湖，本名保障湖。”乾隆元年（1736），钱塘（杭州）诗人汪沆慕名来到扬州，在饱览了这里的美景后，与家乡的西湖作比较，赋诗道：“垂杨不断接残芜，雁齿虹桥俨画图。</p>
+							<div class="main_shadow">
+								<img src="../img/瘦西湖.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;凤凰岛</h1>
+							<p style="width: 100%;text-align: left;color: black;">扬州凤凰岛又称凤凰岛生态旅游区 凤凰岛位于扬州市广陵区东北郊的泰安镇凤凰岛，扬州凤凰岛生态旅游区为国家级农业旅游示范点、国家3A级旅游区、江苏省级森林公园，在著名的“江都抽水机站”和“万福闸”之间的北部，距市区约12公里，岛屿面积6平方公里。</p>
+							<div class="main_shadow">
+								<img src="../img/凤凰岛.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;冶春园</h1>
+							<p style="width: 100%;text-align: left;color: black;">为清诗人王渔洋结社吟诗之地，原址在大虹桥西。今园始建于清末民初、南临清流、北枕低埠。有水绘阁、问月山房、香影廊等建筑。园中的草庐，碧水当窗、花木掩映，古朴中带着野趣。有盆景和金鱼等展出，为市区品茗小憩的理想去所。</p>
+							<div class="main_shadow">
+								<img src="../img/冶春园.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;大运河</h1>
+							<p style="width: 100%;text-align: left;color: black;">大运河（Grand Canal）是中国东部平原上的伟大工程，是中国古代劳动人民创造的一项伟大的水利建筑，为世界上最长的运河，也是世界上开凿最早、规模最大的运河。大运河始建于公元前486年，包括隋唐大运河、京杭大运河和浙东大运河三部分，全长2700公里。</p>
+							<div class="main_shadow">
+								<img src="../img/运河.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+					</div>
+					</button>
+				</li>
+				<li>
+					<button id="wenchangge">人文
+					<div class="main_picture" id="picture3">
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;个园</h1>
+							<p style="width: 100%;text-align: left;color: black;">个园位于扬州古城东北隅，盐阜东路10号，曾荣获第三批“全国重点文物保护单位”和“首批国家重点公园”称号,在国内外享有盛誉,也是中国四大名园之一，这座清代扬州盐商宅邸私家园林，以遍植青竹而名，以春夏秋冬四季假山而胜。</p>
+							<div class="main_shadow">
+								<img src="../img/个园.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;东关街</h1>
+							<p style="width: 100%;text-align: left;color: black;">东关街是扬州城里最具有代表性的一条历史老街。它东至古运河边，西至国庆路，全长1122米，原街道路面为长条板石铺设，这条街以前不仅是扬州水陆交通要冲，而且是商业、手工业和宗教文化中心。街面上市井繁华、商家林立，行当俱全，生意兴隆。</p>
+							<div class="main_shadow">
+								<img src="../img/东关街.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;何园</h1>
+							<p style="width: 100%;text-align: left;color: black;">何园，坐落于江苏省扬州市的徐凝门街66号，又名”寄啸山庄“，是一处始建于清代中期的中国古典园林建筑，被誉为“晚清第一园“，面积1.4万余平方米，建筑面积7000余平方米。何园由清光绪年间何芷舠所造，片石山房系石涛大师叠山作品。</p>
+							<div class="main_shadow">
+								<img src="../img/何园.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;文昌阁</h1>
+							<p style="width: 100%;text-align: left;color: black;">扬州文昌阁位于汶河路、文昌路交叉处，为江苏省扬州市地标建筑。文昌阁，建于明代万历十三年(1585年)，属于扬州府学建筑群，旧日阁上悬有"邗上文枢"匾额。扬州府学建筑，已陆续圮毁，现仅存文昌阁，为扬州市级文物保护单位。</p>
+							<div class="main_shadow">
+								<img src="../img/文昌阁.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+					</div>
+					</button>
+				</li>
+				<li>
+					<button id="other">其他
+					<div class="main_picture" id="picture4">
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;城区</h1>
+							<p style="width: 100%;text-align: left;color: black;">扬州，古称广陵、江都、维扬，建城史可上溯至公元前486年[1]  ，是江苏省地级市，地处江苏中部、长江与京杭大运河交汇处，有“淮左名都，竹西佳处”之称，又有着“中国运河第一城”的美誉。被誉为扬一益二、淮南第一州、月亮城 。</p>
+							<div class="main_shadow">
+								<img src="../img/城区.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;二十四桥</h1>
+							<p style="width: 100%;text-align: left;color: black;">二十四桥是古代桥梁建筑的杰作，位于江苏省扬州市，历史上的二十四桥早已颓圮于荒烟衰草。现今扬州市经过规划，在瘦西湖西修长桥，筑亭台，重修了二十四桥景点，为古城扬州增添了新的风韵。二十四桥为单孔拱桥，汉白玉栏杆，如玉带飘逸，似霓虹卧波</p>
+							<div class="main_shadow">
+								<img src="../img/二十四桥.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;茱萸湾</h1>
+							<p style="width: 100%;text-align: left;color: black;">《重修扬州府志》载：“汉吴王刘濞开此通海陵仓（是以此为起点开挖邗沟通往泰州）”，因此地北有茱萸村，并遍植茱萸树，故以茱萸立名，且此处又有弯道，故“茱萸湾”始得名。茱萸湾2011年被评为国家4A级旅游景区，2014年获评江苏省生态文明教育基地。</p>
+							<div class="main_shadow">
+								<img src="../img/茱萸湾.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+						
+						<div class="main_in_picture">
+							<h1 style="width: 100%;text-align: left;color: black;height: 50px;line-height: 50px;">&nbsp;扬州八怪纪念馆</h1>
+							<p style="width: 100%;text-align: left;color: black;">扬州八怪纪念馆位于江苏省扬州市金农故居西方寺内，展厅中陈列有“八怪”书画，供游客品赏。“扬州八怪”是清代活跃在扬州画坛上的一批具有创新精神的画家，以其立意新、构图新，技法新的艺术作品开创了一代新画风，为中国书画艺术发展立下了不朽的功业。</p>
+							<div class="main_shadow">
+								<img src="../img/扬州八怪.jpg" style="width: 450px;height: 225px;" alt="">
+								<div class="main_shadow_show">
+								</div>
+								<a href="" class="shadow_a">查看详情</a>
+							</div>
+						</div>
+					</div>
+					</button>
+				</li>
+			</ul>
+		</div>
+		<div id="main_bottom">
+			<p style="font-size: 18px;color: #a2a2a2;margin: 35px 700px;">要了解更多，请联系我们</p>
+		</div>
+	</main>
+	<footer id="foot">
+		<div id="foot_logo_div">
+			<p style="font-size: 20px;color: #a2a2a2;position: absolute;top: 50px;left: 200px;">关于我们</p>
+			<p style="font-size: 14px;color: #a2a2a2;position: absolute;top: 75px;left: 200px;">Our goal is to keep clients satisfied!<br>我们的目标是让客户满意!</p>
+			<p style="font-size: 20px;color: #a2a2a2;position: absolute;top: 50px;left: 750px; width: 100px;text-align: center;">联系我们</p>
+			<img src="../img/新浪logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 700px;">
+			<img src="../img/腾讯logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 750px;">
+			<img src="../img/微信logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 800px;">
+			<img src="../img/网易logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 850px;">
+			<p style="font-size: 20px;color: #a2a2a2;position: absolute;top: 50px;left: 1200px;">时事通讯</p>
+			<form action="" style="float: left; position: absolute;top: 80px;left: 1200px;">
+				<input type="text" value="输入邮箱(Enter email address)" style="width: 200px;height: 40px; outline: none;border: none;background-color: #333333;color:#a9a9a9;border-radius: 5px;"><br/>
+				<input type="submit" value="GO" style="width: 50px;height: 40px;border: none;background-color: #444444;color: #a2a2a2;border-radius: 5px;margin-left: -3px;">
+			</form>
+		</div>
+		<div id="copyright">
+			<p style="color: #a2a2a2;font-size: 12px;line-height: 20px;">&copy;Copyright</p>
+		</div>
+	</footer>
+</body>
+</html>
