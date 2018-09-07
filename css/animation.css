@@ -1,0 +1,38 @@
+@keyframes jump {
+    from{
+        transform:rotate(0deg);
+        opacity:1;
+    }
+    25%{
+        transform: rotate(20deg);
+        opacity: 0.4;
+    }
+    50%{
+        transform: rotate(-20deg);
+        opacity: 1;
+    }
+    75%{
+        transform: rotate(20deg);
+        opacity: 0.4;
+    }
+    to{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+.pic1:hover{
+    animation: jump 0.3s linear;
+}
+.pic2:hover{
+    animation: jump 0.3s linear;
+}
+.pic3:hover{
+    animation: jump 0.3s linear;
+}
+.pic4:hover{
+    animation: jump 0.3s linear;
+}
+#guanyu_down{
+    z-index: 10;
+}
+
