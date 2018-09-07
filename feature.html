@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>特色</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 微软雅黑;
+        }
+        #head{
+            width: 1600px;
+            height: 200px;
+        }
+        #head_div1{
+            width: 1600px;
+            height: 100px;
+            float: left;
+        }
+        #head_div2{
+            width: 1600px;
+            height: 100px;
+            background-color: #32867c;
+            float: left;
+        }
+        #ul1 li{
+            list-style: none;
+            float: left;
+        }
+        .li_div{
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .li_div:hover{
+            height: 47px;
+            border-bottom: 3px solid #32867c;
+        }
+        .li_a{
+            text-decoration: none;
+            color: black;
+            outline: none;
+        }
+        #li_down_div:hover #guanyu_down{
+            visibility: visible;
+        }
+        #guanyu_down{
+            background-color: white;
+            width: 200px;
+            height: 100px;
+            border-top: 3px solid #32867c;
+            position: absolute;
+            top: 72px;
+            left: 1163px;
+            visibility: hidden;
+        }
+        #guanyu_ul li{
+            width: 200px;
+            text-align: left;
+            font-size: 14px;
+        }
+        a { color: #2ba6cb; text-decoration: none; line-height: inherit; }
+        a:hover { color: #2795b6 }
+        h1 { font-size: 40px }
+        h2 { font-size: 37px }
+        h3 { font-size: 27px }
+        h4 { font-size: 23px }
+        h5 { font-size: 17px }
+        h6 { font-size: 14px }
+        hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 22px 0 21px; height: 0; }
+        ul,ol { font-size: 14px; line-height: 1.6; margin-bottom: 17px; list-style-position: inside; }
+        ul li ul,ul li ol { margin-left: 20px; margin-bottom: 0; }
+        ul.square,ul.d2,ul.d3 { margin-left: 17px }
+        ul.square { list-style-type: square }
+        ul.square li ul { list-style: inherit }
+        ul.circle li ul { list-style: inherit }
+        ul.disc li ul { list-style: inherit }
+        li { line-height: 21px;color: #6b6b6b }
+        ol li ul,ol li ol { margin-left: 20px; margin-bottom: 0; }
+        p{color:#6b6b6b;}
+        .d{
+            /*border: 1px solid red;*/
+            width: 65%;
+            margin: 0 auto;
+            height: 300px;
+        }
+        .biaotikuang{
+            /*border: 1px solid red;*/
+            width: 65%;
+            margin: 0 auto;
+            height: 450px;
+	    margin-top:50px;
+        }
+        .h1{
+            /*border: 1px solid red;*/
+            width: 65%;
+            height: 310px;
+            margin: 0 auto;
+            margin-top: -120px;
+        }
+        .h2{
+               /*border: 1px solid red;*/
+               width: 65%;
+               margin: 0 auto;
+                margin-top:60px;
+           }
+        .h4{
+            /*border: 1px solid red;*/
+            width: 65%;
+            margin: 0 auto;
+            margin-top:60px;
+        }
+        .a1{
+            background:url("../img/1.jpg") no-repeat;
+            width:400px;
+            height:210px;
+            float: left;
+            margin-left: -10px;
+        }
+        .a2{
+            background:url("../img/2.jpg") no-repeat;
+            width:500px;
+            height:210px;
+            float:right;
+            margin-right: -100px;
+        }
+        .c1{
+            width:400px;
+            height:210px;
+            display: none;
+            color: #2795b6;
+            background:url("../img/4.jpg") no-repeat;
+        }
+        .c2{
+            width:400px;
+            height:210px;
+            display: none;
+            color: #2795b6;
+            background:url("../img/4.jpg") no-repeat;
+        }
+        .a1:hover .c1{
+            display: block;
+        }
+        .a2:hover .c2{
+            display: block;
+        }
+        .d1 {
+            height: 300px;
+            float: left;
+            /*border: 1px solid red;*/
+            width:33%
+        }
+        .d2{
+            height:350px;
+            float: right;
+            width:33%
+        }
+        .d3{
+            height:350px;
+            float:left;
+            width:33%
+        }
+        .h5{
+            /*border: 1px solid red;*/
+            width: 65%;
+            margin: 0 auto;
+            position: absolute;
+            top:1580px;
+            left: 230px;
+        }
+        #foot{
+            width: 1600px;
+            height: 200px;
+            border-top: 5px solid #32867c;
+            position:relative;
+            margin-top: 280px;
+        }
+        #foot_logo_div{
+            width: 100%;
+            height: 180px;
+            background-color: #151515;
+        }
+        #copyright{
+            width: 100%;
+            height: 20px;
+            background-color: #111111;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header id="head">
+    <div id="head_div1">
+        <p style="width: 200px;height: 100px;text-align: center;line-height: 100px;font-size: 30px;font-weight: 900;margin-left: 200px;float: left;">
+            扬州旅行社
+        </p>
+        <ul id="ul1" style="width: 600px;height: 50px;float: left;margin-left: 400px;margin-top: 25px;">
+            <li>
+                <div class="li_div"><a class="li_a" href="index.html">主页</a></div>
+            </li>
+            <li>
+                <div class="li_div"><a class="li_a" href="places.html">景点介绍</a></div>
+            </li>
+            <li>
+                <div class="li_div"><a class="li_a" href="comments.html">热评</a></div>
+            </li>
+            <li>
+                <div class="li_div" id="li_down_div">
+                    关于
+                    <div id="guanyu_down">
+                        <ul id="guanyu_ul">
+                            <li>
+                                &nbsp;&nbsp;&nbsp;<a href="about.html" style="outline: none;text-decoration: none;color: black;">关于我们</a>
+                                <hr style="width: 85%;margin: auto;border: 1px solid #cccccc;">
+                            </li>
+                            <li>
+                                &nbsp;&nbsp;&nbsp;<a href="services.html" style="outline: none;text-decoration: none;color: black;">服务</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="li_div"><a class="li_a" href="feature.html">特色</a></div>
+            </li>
+            <li>
+                <div class="li_div"><a class="li_a" href="contact.html">联系我们</a></div>
+            </li>
+        </ul>
+
+    </div>
+    <div id="head_div2">
+        <p style="width: 150px;height: 100px;text-align: center;line-height: 100px;font-size: 24px;color: white;margin-left: 200px;">特色</p>
+    </div>
+</header>
+
+    <div class="biaotikuang">
+        <h5>团队介绍</h5>
+        <hr>
+        <!--<div class="biaotikuangyi">-->
+            <h1></h1>
+            <h2>超高的团队素质</h2>
+            <h3>超牛的导游团队</h3>
+            <h4>超快的业务办理</h4>
+            <h5>超美的自然风光</h5>
+            <h6>超棒的服务态度</h6>
+            <p>参加扬州旅行社，出行无忧，快乐无阻，健康在脚下 ，一起走吧，一起领略瘦西湖碧水含烟柳,无双聚八仙；参观“晚清第一园”何园；月映竹成千"个"字,霜高梅孕一身花的个园。</p>
+        </div>
+
+        <div class="h1">
+            <h5>扬州印象</h5>
+            <hr>
+            <div class="a1">
+                <div class="c1"><br>一天，乾隆的游船到了五亭桥畔，忽然对扬州陪同官员说：“这里多像京城北海的琼岛春阴啊，只可惜差一座白塔。”第二天清晨，乾隆开窗一看，只见五亭桥旁一座白塔巍然耸立，以为是从天而降，身旁的太监连忙跪奏道：“是盐商大贾为弥补圣上游瘦西湖之憾，连夜赶制而成的。”原来这座白塔是八大盐商之一的江春用万金贿赂乾隆左右，根据北京白塔的图样，然后用盐包为基础，以纸扎为表面，在一夜之间制作而成的。尽管只可远视，不可近攀，但乾隆不无感慨地说：“人道扬州盐商富甲天下，果然名不虚传。</div>
+            </div>
+            <div class="a2">
+                <div class="c2"><br>二十四桥位于江苏省扬州市，历史上的二十四桥旱颓圮于荒烟衰草。扬州市经过规划，在瘦西湖西修长桥，筑亭台，重修了二十四桥景点，为古城扬州增添了新的风韵。廿四桥为单孔拱桥，汉白玉栏杆，如玉带飘逸，似霓虹卧波。该桥长24米，宽2.4米，栏柱24根，台级24层，似乎处处都与二十四对应。洁白栏板上彩云追月的浮雕，桥与水衔接处巧云状湖石堆叠，周围遍植馥郁丹桂，使人随时看到云、水、花、月，体会到二十四桥明月夜的妙境。</div>
+            </div>
+        </div>
+        <div class="h2">
+            <h5>旅游新闻</h5>
+            <hr>
+            <div class="">
+                <h2><a href="#">江苏省扬州市旅游攻略</a></h2>
+                <h3><a href="#">扬州旅游需要多少钱</a></h3>
+                <h4><a href="#">扬州夏日活动</a></h4>
+                <h5><a href="#">扬州景点大全</a></h5>
+                <p>
+                    <a href="#">了解更多详情...</a>
+                </p>
+                </div>
+            </div><br>
+    <div class="h4">
+        <h5>扬州特色菜</h5>
+        <hr>
+    </div>
+    <div class="d">
+        <div class="d1">
+        <h5>食为天酒店</h5>
+        <ul class="">
+            <li>菊目双雄.</li>
+            <li>麻香鸭掌</li>
+            <li>鲍鱼扒鹅掌
+                <ul>
+                    <li>胭脂鸭</li>
+                    <li>凤味鱼</li>
+                    <li>一品锅贴番茄</li>
+                </ul>
+            </li>
+            <li>酥皮龙寿盅</li>
+            <li>明兜扇贝皇</li>
+            <li>竹筒银杏肚肺</li>
+        </ul>
+    </div>
+    <div class="d2">
+        <h5>富春茶社</h5>
+        <ul class="">
+            <li> 蟹粉狮子头</li>
+            <li>千层油糕</li>
+            <li>包子
+                <ul>
+                    <li>五丁包</li>
+                    <li>富春大汤包</li>
+                    <li>蟹黄包</li>
+                </ul>
+            </li>
+            <li> 魁龙珠茶</li>
+            <li>野鸭菜包</li>
+            <li>蟹粉干丝 </li>
+        </ul>
+    </div>
+    <div class="d3">
+        <h5>花园国际大酒店</h5>
+        <ul class="square">
+            <li>贵盏鱼米.</li>
+            <li>江瑶罗卜菊</li>
+            <li>花园系列
+                <ul>
+                    <li>花园一品肉</li>
+                    <li>花园一品锅</li>
+                    <li>花园胭脂鸽</li>
+                </ul>
+            </li>
+            <li>鸳鸯鸡翅</li>
+            <li>火焰鳜鱼</li>
+            <li>水晶牛排</li>
+        </ul>
+     </div>
+    </div>
+<div class="h5">
+    <h5>公司简介</h5>
+    <hr>
+    <blockquote>
+        扬州旅行社是经国家旅游局批准，工商局登记、注册的一家专业旅游公司。公司成立以来，凭借全面规范的管理，全新的服务理念，集体化的网络优势，不断推出更加适合市场需求的特色旅游线路，提供更为周到的全程服务。公司业绩持续提高，年接待游客13万多人次，巩固了公司在苏中地区行业中的领先地位。 我们始终坚持“相同的质量，我们比价格，相同的价格，我们比质量”。对于客户来说，选择一家信誉强、服务好的旅行社将使您的旅行省却诸多的烦恼。我们深知这个道理，一直在流程与服务中创立舜天旅游服务黄金品牌。 我们在操作过程中严格按照旅行服务ISO9001的国际质量标准执行。我们不仅专业，而且更加细心。我们一直以人性化服务来满足客户的需求，所以我们加倍努力不容懈怠。</cite>
+    </blockquote>
+    </div>
+<footer id="foot">
+    <div id="foot_logo_div">
+        <p style="font-size: 20px;color: #a2a2a2;position: absolute;top: 50px;left: 200px;">关于我们</p>
+        <p style="font-size: 14px;color: #a2a2a2;position: absolute;top: 75px;left: 200px;">Our goal is to keep clients satisfied!<br>我们的目标是让客户满意!</p>
+        <p style="font-size: 20px;color: #a2a2a2;position: absolute;top: 50px;left: 750px; width: 100px;text-align: center;">联系我们</p>
+        <img src="../img/新浪logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 700px;">
+        <img src="../img/腾讯logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 750px;">
+        <img src="../img/微信logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 800px;">
+        <img src="../img/网易logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 850px;">
+        <p style="font-size: 20px;color: #a2a2a2;position: absolute;top: 50px;left: 1200px;">时事通讯</p>
+        <form action="" style="float: left; position: absolute;top: 80px;left: 1200px;">
+            <input type="text" value="输入邮箱(Enter email address)" style="width: 200px;height: 40px; outline: none;border: none;background-color: #333333;color:#a9a9a9;border-radius: 5px;"><br/>
+            <input type="submit" value="GO" style="width: 50px;height: 40px;border: none;background-color: #444444;color: #a2a2a2;border-radius: 5px;margin-left: -3px;">
+        </form>
+    </div>
+    <div id="copyright">
+        <p style="color: #a2a2a2;font-size: 12px;line-height: 20px;">&copy;Copyright</p>
+    </div>
+</footer>
+<!--<div class="hr">-->
+<!--</div>-->
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详细介绍</title>
+    <link rel="stylesheet" href="../css/detail.css"/>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/lunbo.js"></script>
+</head>
+<body>
+    <header id="head">
+        <div id="head_div1">
+            <p style="width: 200px;height: 100px;text-align: center;line-height: 100px;font-size: 30px;font-weight: 900;margin-left: 200px;float: left;">
+                扬州旅行社
+            </p>
+            <ul id="ul1" style="width: 600px;height: 50px;float: left;margin-left: 400px;margin-top: 25px;">
+                <li>
+                    <div class="li_div"><a class="li_a" href="index.html">主页</a></div>
+                </li>
+                <li>
+                    <div class="li_div"><a class="li_a" href="places.html">景点介绍</a></div>
+                </li>
+                <li>
+                    <div class="li_div"><a class="li_a" href="comments.html">热评</a></div>
+                </li>
+                <li>
+                    <div class="li_div" id="li_down_div">
+                        关于
+                        <div id="guanyu_down">
+                            <ul id="guanyu_ul">
+                                <li>
+                                    &nbsp;&nbsp;&nbsp;<a href="about.html" style="outline: none;text-decoration: none;color: black;">关于我们</a>
+                                    <hr style="width: 85%;margin: auto;border: 1px solid #cccccc;">
+                                </li>
+                                <li>
+                                    &nbsp;&nbsp;&nbsp;<a href="services.html" style="outline: none;text-decoration: none;color: black;">服务</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_div"><a class="li_a" href="feature.html">特色</a></div>
+                </li>
+                <li>
+                    <div class="li_div"><a class="li_a" href="contact.html">联系我们</a></div>
+                </li>
+            </ul>
+
+        </div>
+    </header>
+<section id="d0">
+    <div class="d1">
+        <div class="d1_1">
+             <p>详细介绍</p>
+        </div>
+        <div class="d1_2">
+            <p>
+                <a href="">查看更多景点</a>
+            </p>
+         </div>
+    </div>
+    <div class="d2">
+        <div class="d2_1">
+            <p><b>个 &nbsp;&nbsp;园</b></p>
+        </div>
+        <div class="d2_2">
+            <div>
+                 <p>&nbsp;&nbsp;个园位于扬州古城东北隅，盐阜东路10号，曾荣获第三批“全国
+                     重点文物保护单位”和“首批国家重点公园”称号, 在国内外享有盛
+                     誉,也是中国四大名园之一。这座清代扬州盐商宅邸私家园林，以遍植青竹
+                     而名，以春夏秋冬四季假山而胜。由两淮盐业商总黄至筠于清嘉庆23年
+                     （公元1818年）在原明代“寿芝园”的基础上拓建为住宅园林
+                </p>
+            </div>
+            <div id="box">
+                <ol>
+                    <li class="active">景点</li>
+                    <li>历史</li>
+                    <li>文化活动</li>
+                </ol>
+                <div style="display: block" class="m">
+                    <p>
+                        &nbsp;&nbsp;个园以叠石艺术著名，笋石、湖石、黄石、宜石叠成
+                        的春夏秋冬四季假山，融造园法则与山水画理于一体，"四季假山"的构思与建筑，在面积不足五十亩的园子里，开辟
+                        了四个形态逼真的假山区，分别命以春、夏、秋、冬之称。
+                    </p>
+                    <img src="../img/check.png" alt="" class="m1"><b>抱山楼</b>
+                    <img src="../img/check.png" alt="" class="m2"><b>清漪亭</b><br/>
+                    <img src="../img/check.png" alt="" class="m3"><b>丛书楼</b>
+                    <img src="../img/check.png" alt="" class="m4"><b>宜雨轩</b>
+                </div>
+                <div class="m">
+                    <p>
+                        &nbsp;&nbsp;清嘉庆二十三年（公元1818年），两淮盐业商总黄至
+                        筠在明代寿芝园旧址上创建个园。刘凤诰所撰《个园记》有记载：“园内池馆清幽，水木明瑟，并种竹万竿，故曰个园。”
+                    </p>
+                    <img src="../img/check.png" alt="" class="m5"><b>国家AAAA级风景旅游区</b><br/>
+                    <img src="../img/check.png" alt="" class="m6"><b>首批国家重点花文化基地之一</b><br/>
+                    <img src="../img/check.png" alt="" class="m6"><b>第三批“全国重点文物保护单位”</b>
+
+                </div>
+                <div class="m">
+                    <p>
+                        &nbsp;&nbsp;2015年12月5日，为纪念魏之祯先生百年诞辰，
+                        由扬州市文联、广陵区政协、扬州市书协主办，扬州市个园管理处承办的“心饮百年魏之祯先生书法精品展”在个园抱山
+                        楼开展。魏之祯先生是八十年代前后扬州书坛的领袖式人物，本次展出的作品虽然数量有限，但都是精品，可以基本反映
+                        先生的书法水平。
+                    </p>
+                </div>
+                <script>
+                    var box=document.getElementById("box");
+                    var oLi=box.getElementsByTagName('li');
+                    var oDiv=box.getElementsByTagName("div");
+                    for(var i=0;i<oLi.length;i++){
+                        oLi[i].index=i;
+                        oLi[i].onclick=function(){
+                            for(var i=0;i<oLi.length;i++){
+                                oLi[i].className='';
+                                oDiv[i].style.display="none";
+                            }
+                            this.className='active';
+                            oDiv[this.index].style.display='block';
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <!--轮播-->
+      <div id="lunbo">
+            <div class="pic">
+                <a href="#" style="display:block"><img src="../img/shouye.png"/></a>
+                <a href="#"><img src="../img/zhuye1.png"/></a>
+                <a href="#"><img src="../img/zhuye2.png"/></a>
+                <a href="#"><img src="../img/zhuye3.png"/></a>
+                <a href="#"><img src="../img/zhuye4.png"/></a>
+            </div>
+            <div class="btn">
+                <ul>
+                    <li class="one"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    <div class="d3">
+        <p>
+            loading tweets...
+        </p>
+    </div>
+</section>
+    <footer id="foot">
+        <div id="foot_logo_div">
+            <p style="font-size: 20px;color: #a2a2a2;position: absolute;top: 50px;left: 200px;">关于我们</p>
+            <p style="font-size: 14px;color: #a2a2a2;position: absolute;top: 75px;left: 200px;">Our goal is to keep clients satisfied!<br>我们的目标是让客户满意!</p>
+            <p style="font-size: 20px;color: #a2a2a2;position: absolute;top: 50px;left: 750px; width: 100px;text-align: center;">联系我们</p>
+            <img src="../img/新浪logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 700px;">
+            <img src="../img/腾讯logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 750px;">
+            <img src="../img/微信logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 800px;">
+            <img src="../img/网易logo.jpg" alt="" style="border-radius: 10px;position: absolute;top: 80px;left: 850px;">
+            <p style="font-size: 20px;color: #a2a2a2;position: absolute;top: 50px;left: 1200px;">时事通讯</p>
+            <form action="" style="float: left; position: absolute;top: 80px;left: 1200px;">
+                <input type="text" value="输入邮箱(Enter email address)" style="width: 200px;height: 40px; outline: none;border: none;background-color: #333333;color:#a9a9a9;border-radius: 5px;">
+                <input type="submit" value="GO" style="width: 50px;height: 40px;border: none;background-color: #444444;color: #a2a2a2;border-radius: 5px;margin-left: -3px;">
+            </form>
+        </div>
+        <div id="copyright">
+            <p style="color: #a2a2a2;font-size: 12px;line-height: 20px;">&copy;Copyright</p>
+        </div>
+    </footer>
+</body>
+</html>
