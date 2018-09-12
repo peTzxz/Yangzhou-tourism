@@ -1,22 +1,15 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Î¢ÈíÑÅºÚ;
+    font-family: å¾®è½¯é›…é»‘;
 }
 #head{
     width: 1600px;
-    height: 200px;
-    border-top: 5px solid #32867c;
+    height: 100px;
 }
 #head_div1{
-    width:1600px;
-    height: 100px;
-    float: left;
-}
-#head_div2{
     width: 1600px;
     height: 100px;
-    background-color: #32867c;
     float: left;
 }
 #ul1 li{
@@ -32,6 +25,7 @@
 .li_div:hover{
     height: 47px;
     border-bottom: 3px solid #32867c;
+    text-decoration: none;
 }
 .li_a{
     text-decoration: none;
@@ -46,23 +40,21 @@
     width: 200px;
     height: 100px;
     border-top: 3px solid #32867c;
-    position: absolute;
-    top: 72px;
-    left: 1163px;
+    position: relative;
+    top: -3px;
+    left: 0px;
     visibility: hidden;
+    z-index:1;
+
 }
 #guanyu_ul li{
     width: 200px;
     text-align: left;
     font-size: 14px;
 }
-
-ul,li {
-    margin:0px;
-    padding:0px;
-    list-style-type:none;
+#guanyu_down #guanyu_ul li a:active{
+    text-decoration: none;
 }
-
 .content{
     height:850px;
     width:1600px;

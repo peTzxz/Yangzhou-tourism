@@ -44,6 +44,8 @@
             top: -3px;
             left: 0px;
             visibility: hidden;
+            z-index:1;
+
         }
         #guanyu_ul li{
             width: 200px;
@@ -54,11 +56,11 @@
             text-decoration: none;
         }
  .d1{
-    width: 1600px;
-    height: 77px;
-    background: #35867d;
-    border: 1px solid red;
-}
+      width: 1600px;
+      height: 77px;
+      background: #35867d;
+      border: 1px solid black;
+  }
 .d1 .d1_1 p{
     font-size: 28px;
     padding-top: 15px;

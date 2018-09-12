@@ -1,27 +1,23 @@
 *{
     margin: 0;
     padding: 0;
-}
-body{
-    margin: 0 auto;
+    font-family: 微软雅黑;
 }
 #head{
-    width: 1350px;
+    width: 1600px;
     height: 100px;
 }
 #head_div1{
-    /*border: 1px solid blue;*/
-    width: 1350px;
+    width: 1600px;
     height: 100px;
     float: left;
 }
 #ul1 li{
-    /*border: 1px solid red;*/
     list-style: none;
     float: left;
 }
 .li_div{
-    width: 75px;
+    width: 100px;
     height: 50px;
     text-align: center;
     line-height: 50px;
@@ -29,6 +25,7 @@ body{
 .li_div:hover{
     height: 47px;
     border-bottom: 3px solid #32867c;
+    text-decoration: none;
 }
 .li_a{
     text-decoration: none;
@@ -42,24 +39,26 @@ body{
     background-color: white;
     width: 200px;
     height: 100px;
-    text-align: center;
     border-top: 3px solid #32867c;
-    position: absolute;
-    top: 72px;
-    left: 930px;
+    position: relative;
+    top: -3px;
+    left: 0px;
     visibility: hidden;
-    z-index: 10;
+    z-index:1;
 }
 #guanyu_ul li{
     width: 200px;
     text-align: left;
     font-size: 14px;
 }
+#guanyu_down #guanyu_ul li a:active{
+     text-decoration: none;
+ }
 #pic{
     position: absolute;
     top:96px;
     height: 500px;
-    width: 1350px;
+    width: 1600px;
     overflow: hidden;
 }
 #pic p{
@@ -76,37 +75,37 @@ body{
         transform: translateX(0px);
     }
     10%{
-        transform: translateX(-1350px);}
+        transform: translateX(-1600px);}
     20%{
-        transform: translateX(-2700px);
+        transform: translateX(-3200px);
     }
     30%{
-        transform: translateX(-4050px);
+        transform: translateX(-4800px);
     }
     40%{
-        transform: translateX(-5400px);
+        transform: translateX(-6400px);
     }
     50%{
-        transform: translateX(-6750px);
+        transform: translateX(-8000px);
     }
     60%{
-        transform: translateX(-8100px);
+        transform: translateX(-9600px);
     }
 
     70%{
-        transform: translateX(-9450px);
+        transform: translateX(-11200px);
     }
 
     80%{
-        transform: translateX(-10800px);
+        transform: translateX(-12800px);
     }
 
     90%{
-        transform: translateX(-12150px);
+        transform: translateX(-14400px);
     }
 
     100%{
-        transform: translateX(-13500px);
+        transform: translateX(-16000px);
     }
 
 }
@@ -121,63 +120,63 @@ body{
 .border4 div{
     float: left;
     height: 500px;
-    width: 1350px;
+    width: 1600px;
     overflow: hidden;
     display: inline-block;
 }
 .border4 #yz1{
     background-image: url("../img/YZ1.jpeg");
-    background-size: 1350px 500px;
+    background-size: 1600px 500px;
     background-repeat: no-repeat;
 }
 .border4 #yz2{
     background-image: url("../img/YZ2.jpeg");
-    background-size: 1350px 500px;
+    background-size: 1600px 500px;
     background-repeat: no-repeat;
 }
 .border4 #yz3{
     background-image: url("../img/YZU3.jpg");
-    background-size: 1350px 500px;
+    background-size: 1600px 500px;
     background-repeat: no-repeat;
 }
 .border4 #yz4{
     background-image: url("../img/YZ4.jpg");
-    background-size: 1350px 500px;
+    background-size: 1600px 500px;
     background-repeat: no-repeat;
 }
 .border4 #yz5{
     background-image: url("../img/YZ5.jpg");
-    background-size: 1350px 500px;
+    background-size: 1600px 500px;
     background-repeat: no-repeat;
 }
 .border4 #yz6{
     background-image: url("../img/YZ6.jpg");
-    background-size: 1350px 500px;
+    background-size: 1600px 500px;
     background-repeat: no-repeat;
 }
 .border4 #yz7{
     background-image: url("../img/YZ7.jpg");
-    background-size: 1350px 500px;
+    background-size: 1600px 500px;
     background-repeat: no-repeat;
 }
 .border4 #yz8{
     background-image: url("../img/YZ8.jpg");
-    background-size: 1350px 500px;
+    background-size: 1600px 500px;
     background-repeat: no-repeat;
 }
 .border4 #yz9{
     background-image: url("../img/YZU9.jpg");
-    background-size: 1350px 500px;
+    background-size: 1600px 500px;
     background-repeat: no-repeat;
 }
 .border4 #yz10{
     background-image: url("../img/YZ10.jpg");
-    background-size: 1350px 500px;
+    background-size: 1600px 500px;
     background-repeat: no-repeat;
 }
 .border4 #yz11{
     background-image: url("../img/YZ1.jpeg");
-    background-size: 1350px 500px;
+    background-size: 1600px 500px;
     background-repeat: no-repeat;
 }
 .border4:hover{
@@ -186,7 +185,7 @@ body{
 #box div{
     position: absolute;
     top: 486px;
-    width: 135px;
+    width: 160px;
     height: 14px;
     border: 1px solid #555555;
 }
@@ -203,38 +202,38 @@ body{
         transform: translateX(0px);
     }
     11.11%{
-        transform: translateX(135px);
+        transform: translateX(160px);
 
     }
     22.22%{
-        transform: translateX(270px);
+        transform: translateX(320px);
 
     }
     33.33%{
-        transform: translateX(405px);
+        transform: translateX(480px);
 
     }
     44.44%{
-        transform: translateX(540px);
+        transform: translateX(640px);
 
     }
     55.55%{
-        transform: translateX(675px);
+        transform: translateX(800px);
 
     }
     66.66%{
-        transform: translateX(810px);
+        transform: translateX(960px);
 
     }
     77.77%{
-        transform: translateX(945px);
+        transform: translateX(1120px);
 
     }
     88.88%{
-        transform: translateX(1080px);
+        transform: translateX(1280px);
     }
     to{
-        transform: translateX(1215px);
+        transform: translateX(1440px);
     }
 
 }
@@ -246,13 +245,13 @@ body{
 #box #b1 .pic1{
     position: absolute;
     top: -60px;
-    width: 135px;
+    width: 160px;
     height: 60px;
     display: none;
 }
 .pic1{
     background-image: url("../img/YZ1.jpeg");
-    background-size: 135px 60px;
+    background-size: 160px 60px;
 }
 #box #b1:hover .pic1{
     display: block;
@@ -263,18 +262,18 @@ body{
 
 #box #b2{
     background: #333333;
-    left: 135px;
+    left: 160px;
 }
 #box #b2 .pic2{
     position: absolute;
     top: -60px;
-    width: 135px;
+    width: 160px;
     height: 60px;
     display: none;
 }
 .pic2{
     background-image: url("../img/YZ2.jpeg");
-    background-size: 135px 60px;
+    background-size: 160px 60px;
 }
 #box #b2:hover .pic2{
     display: block;
@@ -284,18 +283,18 @@ body{
 }
 #box #b3{
     background: #333333;
-    left: 270px;
+    left: 320px;
 }
 #box #b3 .pic3{
     position: absolute;
     top: -60px;
-    width: 135px;
+    width: 160px;
     height: 60px;
     display: none;
 }
 .pic3{
     background-image: url("../img/YZU3.jpg");
-    background-size: 135px 60px;
+    background-size: 160px 60px;
 }
 #box #b3:hover .pic3{
     display: block;
@@ -305,18 +304,18 @@ body{
 }
 #box #b4{
     background: #333333;
-    left:405px;
+    left:480px;
 }
 #box #b4 .pic4{
     position: absolute;
     top: -60px;
-    width: 135px;
+    width: 160px;
     height: 60px;
     display: none;
 }
 .pic4{
     background-image: url("../img/YZ4.jpg");
-    background-size: 135px 60px;
+    background-size: 160px 60px;
 }
 #box #b4:hover .pic4{
     display: block;
@@ -326,18 +325,18 @@ body{
 }
 #box #b5{
     background: #333333;
-    left:540px;
+    left:640px;
 }
 #box #b5 .pic5{
     position: absolute;
     top: -60px;
-    width: 135px;
+    width: 160px;
     height: 60px;
     display: none;
 }
 .pic5{
     background-image: url("../img/YZ5.jpg");
-    background-size: 135px 60px;
+    background-size: 160px 60px;
 }
 #box #b5:hover .pic5{
     display: block;
@@ -347,18 +346,18 @@ body{
 }
 #box #b6{
     background: #333333;
-    left:675px;
+    left:800px;
 }
 #box #b6 .pic6{
     position: absolute;
     top: -60px;
-    width: 135px;
+    width: 160px;
     height: 60px;
     display: none;
 }
 .pic6{
     background-image: url("../img/YZ6.jpg");
-    background-size: 135px 60px;
+    background-size: 160px 60px;
 }
 #box #b6:hover .pic6{
     display: block;
@@ -368,18 +367,18 @@ body{
 }
 #box #b7{
     background: #333333;
-    left:810px;
+    left:960px;
 }
 #box #b7 .pic7{
     position: absolute;
     top: -60px;
-    width: 135px;
+    width: 160px;
     height: 60px;
     display: none;
 }
 .pic7{
     background-image: url("../img/YZ7.jpg");
-    background-size: 135px 60px;
+    background-size: 160px 60px;
 }
 #box #b7:hover .pic7{
     display: block;
@@ -389,18 +388,18 @@ body{
 }
 #box #b8{
     background: #333333;
-    left:945px;
+    left:1120px;
 }
 #box #b8 .pic8{
     position: absolute;
     top: -60px;
-    width: 135px;
+    width: 160px;
     height: 60px;
     display: none;
 }
 .pic8{
     background-image: url("../img/YZ8.jpg");
-    background-size: 135px 60px;
+    background-size: 160px 60px;
 }
 #box #b8:hover .pic8{
     display: block;
@@ -410,18 +409,18 @@ body{
 }
 #box #b9{
     background: #333333;
-    left:1080px;
+    left:1280px;
 }
 #box #b9 .pic9{
     position: absolute;
     top: -60px;
-    width: 135px;
+    width: 160px;
     height: 60px;
     display: none;
 }
 .pic9{
     background-image: url("../img/YZU9.jpg");
-    background-size: 135px 60px;
+    background-size: 160px 60px;
 }
 #box #b9:hover .pic9{
     display: block;
@@ -431,18 +430,18 @@ body{
 }
 #box #b10{
     background: #333333;
-    left:1215px;
+    left:1440px;
 }
 #box #b10 .pic10{
     position: absolute;
     top: -60px;
-    width: 135px;
+    width: 160px;
     height: 60px;
     display: none;
 }
 .pic10{
     background-image: url("../img/YZ10.jpg");
-    background-size: 135px 60px;
+    background-size: 160px 60px;
 }
 #box #b10:hover .pic10{
     display: block;
@@ -453,7 +452,7 @@ body{
 #subheader{
     position:absolute;
     top: 595px;
-    width: 1350px;
+    width: 1600px;
     height: 80px;
     background: #33877d;
     color: white;
@@ -465,7 +464,7 @@ body{
 #list_2{
     position:absolute;
     top: 675px;
-    left: 195px;
+    left: 255px;
     width: 960px;
     height: 250px;
 }
@@ -637,7 +636,7 @@ body{
     position: absolute;
     width: 960px;
     top: 925px;
-    left: 195px;
+    left: 250px;
     height: 444px;
 }
 .content  .content_p {
@@ -832,7 +831,7 @@ footer{
     outline: none;
 }
 #foot{
-    width: 1350px;
+    width: 1600px;
     height: 200px;
     border-top: 5px solid #32867c;
     position:relative;

@@ -1,72 +1,60 @@
- *{
-            margin: 0;
-            padding: 0;
-            font-family: 微软雅黑;
-        }
-        #head{
-            width: 100%;
-            height: 100px;
-        }
-        #main{
-            width: 100%;
-            height: auto;
-        }
-        #foot{
-            width: 100%;
-            height: 200px;
-            border-top: 5px solid #32867c;
-            position:relative;
-        }
-        #head_div1{
-            width: 100%;
-            height: 100px;
-            float: left;
-        }
-        #head_div2{
-            width: 100%;
-            height: 100px;
-            background-color: #32867c;
-            float: left;
-        }
-        #ul1 li{
-            list-style: none;
-            float: left;
-        }
-        .li_div{
-            width: 100px;
-            height: 50px;
-            text-align: center;
-            line-height: 50px;
-        }
-        .li_div:hover{
-            height: 47px;
-            border-bottom: 3px solid #32867c;
-            text-decoration: none;
-        }
-        .li_a{
-            text-decoration: none;
-            color: black;
-            outline: none;
-        }
-        #li_down_div:hover #guanyu_down{
-            visibility: visible;
-        }
-        #guanyu_down{
-            background-color: white; 
-            width: 200px; 
-            height: 100px; 
-            border-top: 3px solid #32867c; 
-            position: relative; 
-            top: -3px;
-            left: 0px;
-            z-index: 1000;
-            visibility: hidden;
-        }
-        #guanyu_ul li {
-            width: 200px;
-            text-align: left;
-            font-size: 14px;
-        }
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+}
+#head{
+    width: 1600px;
+    height: 100px;
+}
+#head_div1{
+    width: 1600px;
+    height: 100px;
+    float: left;
+}
+#ul1 li{
+    list-style: none;
+    float: left;
+}
+.li_div{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.li_div:hover{
+    height: 47px;
+    border-bottom: 3px solid #32867c;
+    text-decoration: none;
+}
+.li_a{
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+#li_down_div:hover #guanyu_down{
+    visibility: visible;
+}
+#guanyu_down{
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    border-top: 3px solid #32867c;
+    position: relative;
+    top: -3px;
+    left: 0px;
+    visibility: hidden;
+    z-index:1;
+
+}
+#guanyu_ul li{
+    width: 200px;
+    text-align: left;
+    font-size: 14px;
+}
+#guanyu_down #guanyu_ul li a:active{
+    text-decoration: none;
+}
 .lunbotupian {
     width: 1350px;
     border: 5px solid white;
@@ -121,6 +109,7 @@
 }
 .xiahuaxuxian{
     border:1px dashed silver;
+    margin-top: 15px;
 }
 .comment1{
     width:180px;
@@ -137,7 +126,7 @@
     font-family: 黑体;
     font-size: 10px;
     position: absolute;
-    top:20px;
+    top:25px;
     left:60px;
 }
 .zhengwen{
@@ -171,7 +160,7 @@ a:hover{
     font-family: 黑体;
     font-size: 10px;
     position: absolute;
-    top:20px;
+    top:25px;
     left:60px;
 }
 .zhengwen2{
@@ -203,7 +192,7 @@ a:hover{
     font-family: 黑体;
     font-size: 10px;
     position: absolute;
-    top:20px;
+    top:25px;
     left:60px;
 }
 .zhengwen3{
@@ -235,7 +224,7 @@ a:hover{
     font-family: 黑体;
     font-size: 10px;
     position: absolute;
-    top:20px;
+    top:25px;
     left:60px;
 }
 .zhengwen4{
@@ -260,7 +249,7 @@ a:hover{
     font-family: 黑体;
     font-size: 10px;
     position: absolute;
-    top:20px;
+    top:25px;
     left:60px;
 }
 .zhengwen5{
@@ -285,7 +274,7 @@ a:hover{
     font-family: 黑体;
     font-size: 10px;
     position: absolute;
-    top:20px;
+    top:25px;
     left:60px;
 }
 .zhengwen6{
@@ -310,7 +299,7 @@ a:hover{
     font-family: 黑体;
     font-size: 10px;
     position: absolute;
-    top:20px;
+    top:25px;
     left:60px;
 }
 .zhengwen7{
@@ -335,7 +324,7 @@ a:hover{
     font-family: 黑体;
     font-size: 10px;
     position: absolute;
-    top:20px;
+    top:25px;
     left:60px;
 }
 .zhengwen8{
@@ -360,7 +349,7 @@ a:hover{
     font-family: 黑体;
     font-size: 10px;
     position: absolute;
-    top:20px;
+    top:25px;
     left:60px;
 }
 .zhengwen9{
@@ -397,7 +386,7 @@ a:hover{
     height:68px;
     border:1px solid white;
     position: absolute;
-    top:60px;
+    top:35px;
 }
 .zuijinpinglun .tupianbianyuan{
     border-radius: 50%;
@@ -421,7 +410,7 @@ a:hover{
      height:68px;
      border:1px solid white;
      position: absolute;
-     top:143px;
+     top:120px;
  }
 .zuijinpinglun .tupianbianyuan{
     border-radius: 50%;
@@ -445,7 +434,7 @@ a:hover{
     height:68px;
     border:1px solid white;
     position: absolute;
-    top:224px;
+    top:203px;
 }
 .zuijinpinglun .tupianbianyuan{
     border-radius: 50%;

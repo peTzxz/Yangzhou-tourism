@@ -43,6 +43,8 @@
     top: 72px;
     left: 1163px;
     visibility: hidden;
+    z-index:1;
+
 }
 #guanyu_ul li{
     width: 200px;
