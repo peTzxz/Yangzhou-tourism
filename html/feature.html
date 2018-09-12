@@ -11,17 +11,11 @@
         }
         #head{
             width: 1600px;
-            height: 200px;
+            height: 100px;
         }
         #head_div1{
             width: 1600px;
             height: 100px;
-            float: left;
-        }
-        #head_div2{
-            width: 1600px;
-            height: 100px;
-            background-color: #32867c;
             float: left;
         }
         #ul1 li{
@@ -37,6 +31,7 @@
         .li_div:hover{
             height: 47px;
             border-bottom: 3px solid #32867c;
+            text-decoration: none;
         }
         .li_a{
             text-decoration: none;
@@ -51,18 +46,20 @@
             width: 200px;
             height: 100px;
             border-top: 3px solid #32867c;
-            position: absolute;
-            top: 72px;
-            left: 1163px;
+            position: relative;
+            top: -3px;
+            left: 0px;
             visibility: hidden;
+            z-index:1;
         }
         #guanyu_ul li{
             width: 200px;
             text-align: left;
             font-size: 14px;
         }
-        a { color: #2ba6cb; text-decoration: none; line-height: inherit; }
-        a:hover { color: #2795b6 }
+        #guanyu_down #guanyu_ul li a:active{
+            text-decoration: none;
+        }
         h1 { font-size: 40px }
         h2 { font-size: 37px }
         h3 { font-size: 27px }
@@ -70,14 +67,14 @@
         h5 { font-size: 17px }
         h6 { font-size: 14px }
         hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 22px 0 21px; height: 0; }
-        ul,ol { font-size: 14px; line-height: 1.6; margin-bottom: 17px; list-style-position: inside; }
+        ul,ol { font-size: 16px; line-height: 1.6; margin-bottom: 17px; list-style-position: inside; }
         ul li ul,ul li ol { margin-left: 20px; margin-bottom: 0; }
         ul.square,ul.d2,ul.d3 { margin-left: 17px }
         ul.square { list-style-type: square }
         ul.square li ul { list-style: inherit }
         ul.circle li ul { list-style: inherit }
         ul.disc li ul { list-style: inherit }
-        li { line-height: 21px;color: #6b6b6b }
+        li { line-height: 21px;}
         ol li ul,ol li ol { margin-left: 20px; margin-bottom: 0; }
         p{color:#6b6b6b;}
         .d{
@@ -115,27 +112,27 @@
         .a1{
             background:url("../img/1.jpg") no-repeat;
             width:400px;
-            height:210px;
+            height:240px;
             float: left;
             margin-left: -10px;
         }
         .a2{
             background:url("../img/2.jpg") no-repeat;
             width:500px;
-            height:210px;
+            height:240px;
             float:right;
             margin-right: -100px;
         }
         .c1{
             width:400px;
-            height:210px;
+            height:240px;
             display: none;
             color: #2795b6;
             background:url("../img/4.jpg") no-repeat;
         }
         .c2{
             width:400px;
-            height:210px;
+            height:240px;
             display: none;
             color: #2795b6;
             background:url("../img/4.jpg") no-repeat;
@@ -150,7 +147,8 @@
             height: 300px;
             float: left;
             /*border: 1px solid red;*/
-            width:33%
+            width:33%;
+
         }
         .d2{
             height:350px;
@@ -231,11 +229,7 @@
         </ul>
 
     </div>
-    <div id="head_div2">
-        <p style="width: 150px;height: 100px;text-align: center;line-height: 100px;font-size: 24px;color: white;margin-left: 200px;">特色</p>
-    </div>
 </header>
-
     <div class="biaotikuang">
         <h5>团队介绍</h5>
         <hr>
